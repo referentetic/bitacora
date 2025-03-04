@@ -14,6 +14,13 @@ const bitacora = [
       descripcion: "Se iniciaron las tareas de reparación de netbooks inactivas, las cuales incluyen la instalación de software y el cambio de pilas. Por el momento, se comenzará con un total de 8 equipos, que serán integrados al parque de equipos de reserva con el propósito de ser utilizados para préstamo interno y/o reasignación en comodato a docentes y estudiantes.",
       mes: 2,
       año: 2025
+   },
+   {
+      titulo: "nuevo",
+      tema: "nuevo",
+      descripcion: "Nuevo nuevo.",
+      mes: 3,
+      año: 2025
    }
 ];
 
