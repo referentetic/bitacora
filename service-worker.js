@@ -5,7 +5,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll([
-                '/bitacora/',
+                '/',
                 '/bitacora/index.html',
                 '/bitacora/app.js',
                 '/bitacora/funciones.js',
