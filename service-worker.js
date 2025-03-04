@@ -2,8 +2,9 @@ const CACHE_NAME = 'suma-pwa-cache-v1';
 const urlsToCache = [
     '/',  // Raíz del sitio
     '/index.html',  // Página principal
-    '/style.css',  // Estilos CSS
+    '/estilos.css',  // Estilos CSS
     '/app.js',  // Archivo de JavaScript
+    '/funciones.js',  // Archivo de JavaScript
     '/manifest.json',  // Archivo del manifiesto
     '/icons/icon-192x192.png',  // Icono de 192x192
     '/icons/icon-512x512.png',  // Icono de 512x512
