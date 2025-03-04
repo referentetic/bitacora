@@ -5,7 +5,7 @@ const bitacora = [
       titulo: "Relevamiento tecnológico integral de la Escuela",
       tema: "Evaluación tecnológica",
       descripcion: "Se evaluó el estado y rendimiento de los recursos tecnológicos, incluyendo el funcionamiento y condición del servidor, la conectividad de la red y el estado general de los dispositivos. Además, se inspeccionó el aula digital móvil, verificando sus condiciones para el uso educativo.", 
-      mes: 2, 
+      mes: 3, 
       año: 2025 
    },
    {
