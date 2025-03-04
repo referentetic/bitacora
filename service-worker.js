@@ -10,6 +10,7 @@ self.addEventListener('install', (event) => {
                 '/app.js',
                 '/funciones.js',
                 '/estilos.css',
+                '/all.css',
                 '/icons/icon-192x192.png',
                 '/icons/icon-512x512.png'
             ]);
