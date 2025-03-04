@@ -1,4 +1,4 @@
-const CACHE_NAME = 'suma-pwa-cache-v2';
+const CACHE_NAME = 'suma-pwa-cache-v3';
 const urlsToCache = [
     '/',  // Raíz del sitio
     '/index.html',  // Página principal
