@@ -5,14 +5,14 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/app.js',
-                '/funciones.js',
-                '/all.css',
-                '/estilos.css',
-                '/icons/icon-192x192.png',
-                '/icons/icon-512x512.png'
+                '/bitacora/',
+                '/bitacora/index.html',
+                '/bitacora/app.js',
+                '/bitacora/funciones.js',
+                '/bitacora/all.css',
+                '/bitacora/estilos.css',
+                '/bitacora/icons/icon-192x192.png',
+                '/bitacora/icons/icon-512x512.png'
             ]);
         })
     );
