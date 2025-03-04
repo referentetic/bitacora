@@ -3,6 +3,7 @@ const urlsToCache = [
     '/',  // Raíz del sitio
     '/index.html',  // Página principal
     '/estilos.css',  // Estilos CSS
+    '/all.css',  // Estilos CSS
     '/app.js',  // Archivo de JavaScript
     '/funciones.js',  // Archivo de JavaScript
     '/manifest.json',  // Archivo del manifiesto
