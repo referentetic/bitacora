@@ -2,7 +2,7 @@
     "name": "Bitácora TICs - Gabriel Bregante",
     "short_name": "Bitácora TICs",
     "description": "Aplicación de actividades TICs",
-    "start_url": "./", 
+    "start_url": "./bitacora/", 
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4CAF50",
