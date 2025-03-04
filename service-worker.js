@@ -19,19 +19,11 @@ const urlsToCache = [
 ];
 
 
-// Instalación del service worker
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => {
-                return cache.addAll(urlsToCache);
-            })
-    );
-});
-
-// Activación del service worker
+// Activación y limpieza de caché anterior
 self.addEventListener('activate', (event) => {
+    console.log('Service Worker: Activado');
     const cacheWhitelist = [CACHE_NAME];
+
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
@@ -45,14 +37,10 @@ self.addEventListener('activate', (event) => {
     );
 });
 
-// Recuperación de recursos desde el cache
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cachedResponse) => {
-            if (cachedResponse) {
-                return cachedResponse;
-            }
-            return fetch(event.request);
+            return cachedResponse || fetch(event.request);
         })
     );
 });
