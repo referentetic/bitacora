@@ -1,7 +1,7 @@
 {
-    "name": "Sumar dos números",
-    "short_name": "Suma PWA",
-    "description": "Una aplicación simple para sumar dos números.",
+    "name": "Bitácora TICs - Gabriel Bregante",
+    "short_name": "Bitácora TICs",
+    "description": "Aplicación de actividades TICs",
     "start_url": "./", 
     "display": "standalone",
     "background_color": "#ffffff",
