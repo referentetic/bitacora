@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v3'; // Incrementa el número de versión cada vez que actualices los archivos
+const CACHE_NAME = 'v1'; // Incrementa el número de versión cada vez que actualices los archivos
 
 self.addEventListener('install', (event) => {
     console.log('Service Worker: Instalado');
