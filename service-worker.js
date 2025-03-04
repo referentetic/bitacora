@@ -18,6 +18,15 @@ const urlsToCache = [
     '/webfonts/fa-v4compatibility.woff2'  // Fuente de compatibilidad v4 (woff2)
 ];
 
+// Instalación del Service Worker
+self.addEventListener('install', (event) => {
+    self.skipWaiting();  // Forzar que el Service Worker se active inmediatamente
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => {
+            return cache.addAll(urlsToCache);  // Almacenar los archivos en caché
+        })
+    );
+});
 
 // Activación y limpieza de caché anterior
 self.addEventListener('activate', (event) => {
@@ -29,7 +38,7 @@ self.addEventListener('activate', (event) => {
             return Promise.all(
                 cacheNames.map((cacheName) => {
                     if (!cacheWhitelist.includes(cacheName)) {
-                        return caches.delete(cacheName);
+                        return caches.delete(cacheName);  // Eliminar caché antiguo
                     }
                 })
             );
@@ -37,10 +46,31 @@ self.addEventListener('activate', (event) => {
     );
 });
 
+// Interceptación de las solicitudes (Fetch)
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cachedResponse) => {
-            return cachedResponse || fetch(event.request);
+            // Si ya existe una respuesta en caché, devuelvela
+            if (cachedResponse) {
+                // Aquí puedes agregar lógica para verificar si la caché está desactualizada y actualizarla
+                const fetchRequest = event.request.clone();
+                
+                // Realizamos la solicitud en segundo plano
+                fetch(fetchRequest).then((networkResponse) => {
+                    // Si la solicitud es exitosa, actualizamos la caché con el contenido más reciente
+                    if (networkResponse && networkResponse.status === 200) {
+                        caches.open(CACHE_NAME).then((cache) => {
+                            cache.put(event.request, networkResponse.clone());
+                        });
+                    }
+                });
+
+                return cachedResponse;  // Retornamos el contenido de la caché
+            }
+
+            // Si no existe en caché, realizamos la solicitud normalmente
+            return fetch(event.request);
         })
     );
 });
+
