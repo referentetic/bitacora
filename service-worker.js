@@ -8,14 +8,14 @@ const urlsToCache = [
     '/manifest.json',  // Archivo del manifiesto
     '/icons/icon-192x192.png',  // Icono de 192x192
     '/icons/icon-512x512.png',  // Icono de 512x512
-    '/webfonts/fa-brands-400.ttf',  // Fuente de marca
-    '/webfonts/fa-brands-400.woff2',  // Fuente de marca (woff2)
-    '/webfonts/fa-regular-400.ttf',  // Fuente regular
-    '/webfonts/fa-regular-400.woff2',  // Fuente regular (woff2)
-    '/webfonts/fa-solid-900.ttf',  // Fuente sólida
-    '/webfonts/fa-solid-900.woff2',  // Fuente sólida (woff2)
-    '/webfonts/fa-v4compatibility.ttf',  // Fuente de compatibilidad v4
-    '/webfonts/fa-v4compatibility.woff2'  // Fuente de compatibilidad v4 (woff2)
+    '/bitacora/webfonts/fa-brands-400.ttf',  // Fuente de marca
+    '/bitacora/webfonts/fa-brands-400.woff2',  // Fuente de marca (woff2)
+    '/bitacora/webfonts/fa-regular-400.ttf',  // Fuente regular
+    '/bitacora/webfonts/fa-regular-400.woff2',  // Fuente regular (woff2)
+    '/bitacora/webfonts/fa-solid-900.ttf',  // Fuente sólida
+    '/bitacora/webfonts/fa-solid-900.woff2',  // Fuente sólida (woff2)
+    '/bitacora/webfonts/fa-v4compatibility.ttf',  // Fuente de compatibilidad v4
+    '/bitacora/webfonts/fa-v4compatibility.woff2'  // Fuente de compatibilidad v4 (woff2)
 ];
 
 // Instalación del Service Worker
