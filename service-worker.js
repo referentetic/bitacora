@@ -1,21 +1,21 @@
 const CACHE_NAME = 'bitacora-pwa-cache-v2';
 const urlsToCache = [
-    '/bitacora/',  // Asegúrate de que esta ruta sea correcta y se refiera a la página principal
-    '/bitacora/index.html',
-    '/bitacora/estilos.css',
-    '/bitacora/app.js',
-    '/bitacora/funciones.js',
-    '/bitacora/manifest.json',
-    '/bitacora/icons/icon-192x192.png',
-    '/bitacora/icons/icon-512x512.png',
-    '/bitacora/webfonts/fa-brands-400.ttf',
-    '/bitacora/webfonts/fa-brands-400.woff2',
-    '/bitacora/webfonts/fa-regular-400.ttf',
-    '/bitacora/webfonts/fa-regular-400.woff2',
-    '/bitacora/webfonts/fa-solid-900.ttf',
-    '/bitacora/webfonts/fa-solid-900.woff2',
-    '/bitacora/webfonts/fa-v4compatibility.ttf',
-    '/bitacora/webfonts/fa-v4compatibility.woff2'
+    '/',  // Raíz del sitio
+    '/index.html',  // Página principal
+    '/estilos.css',  // Estilos CSS
+    '/app.js',  // Archivo de JavaScript
+    '/funciones.js',  // Archivo de JavaScript
+    '/manifest.json',  // Archivo del manifiesto
+    '/icons/icon-192x192.png',  // Icono de 192x192
+    '/icons/icon-512x512.png',  // Icono de 512x512
+    '/webfonts/fa-brands-400.ttf',  // Fuente de marca
+    '/webfonts/fa-brands-400.woff2',  // Fuente de marca (woff2)
+    '/webfonts/fa-regular-400.ttf',  // Fuente regular
+    '/webfonts/fa-regular-400.woff2',  // Fuente regular (woff2)
+    '/webfonts/fa-solid-900.ttf',  // Fuente sólida
+    '/webfonts/fa-solid-900.woff2',  // Fuente sólida (woff2)
+    '/webfonts/fa-v4compatibility.ttf',  // Fuente de compatibilidad v4
+    '/webfonts/fa-v4compatibility.woff2'  // Fuente de compatibilidad v4 (woff2)
 ];
 
 
