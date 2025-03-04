@@ -1,28 +1,36 @@
-const CACHE_NAME = 'v1'; // Incrementa el número de versión cada vez que actualices los archivos
+const CACHE_NAME = 'suma-pwa-cache-v1';
+const urlsToCache = [
+    '/',  // Raíz del sitio
+    '/index.html',  // Página principal
+    '/style.css',  // Estilos CSS
+    '/app.js',  // Archivo de JavaScript
+    '/manifest.json',  // Archivo del manifiesto
+    '/icons/icon-192x192.png',  // Icono de 192x192
+    '/icons/icon-512x512.png',  // Icono de 512x512
+    '/webfonts/fa-brands-400.ttf',  // Fuente de marca
+    '/webfonts/fa-brands-400.woff2',  // Fuente de marca (woff2)
+    '/webfonts/fa-regular-400.ttf',  // Fuente regular
+    '/webfonts/fa-regular-400.woff2',  // Fuente regular (woff2)
+    '/webfonts/fa-solid-900.ttf',  // Fuente sólida
+    '/webfonts/fa-solid-900.woff2',  // Fuente sólida (woff2)
+    '/webfonts/fa-v4compatibility.ttf',  // Fuente de compatibilidad v4
+    '/webfonts/fa-v4compatibility.woff2'  // Fuente de compatibilidad v4 (woff2)
+];
 
+
+// Instalación del service worker
 self.addEventListener('install', (event) => {
-    console.log('Service Worker: Instalado');
     event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll([
-                '/',
-                '/bitacora/index.html',
-                '/bitacora/app.js',
-                '/bitacora/funciones.js',
-                '/bitacora/all.css',
-                '/bitacora/estilos.css',
-                '/bitacora/icons/icon-192x192.png',
-                '/bitacora/icons/icon-512x512.png'
-            ]);
-        })
+        caches.open(CACHE_NAME)
+            .then((cache) => {
+                return cache.addAll(urlsToCache);
+            })
     );
 });
 
-// Activación y limpieza de caché anterior
+// Activación del service worker
 self.addEventListener('activate', (event) => {
-    console.log('Service Worker: Activado');
     const cacheWhitelist = [CACHE_NAME];
-
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
@@ -36,10 +44,14 @@ self.addEventListener('activate', (event) => {
     );
 });
 
+// Recuperación de recursos desde el cache
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cachedResponse) => {
-            return cachedResponse || fetch(event.request);
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            return fetch(event.request);
         })
     );
 });
