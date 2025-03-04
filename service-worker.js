@@ -8,9 +8,7 @@ self.addEventListener('install', (event) => {
                 '/',
                 '/index.html',
                 '/app.js',
-                '/funciones.js',
-                '/estilos.css',
-                '/all.css',
+                '/style.css',
                 '/icons/icon-192x192.png',
                 '/icons/icon-512x512.png'
             ]);
