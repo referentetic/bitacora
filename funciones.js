@@ -46,7 +46,7 @@ const listarBitacora = (bitacora) => {
        return `
            ${mesSeparadorHTML}  <!-- Mostrar el mes si corresponde -->
            <li class="${clase}">
-               <div class="indexExtension1-badge"><i class="fa fa-user"></i>::</div>
+               <div class="indexExtension1-badge"><i class="fa fa-user"></i></div>
                <div class="indexExtension1-panel">
                    <div class="indexExtension1-heading">
                        <h4 class="indexExtension1-title">${p.titulo}</h4>
